@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartão Digital - Ana Designer de Unhas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+
+<body>
+  <div class="container py-4">
+    <div class="row">
+      <div class="card card-bio col-10 mx-auto col-md-4 shadow-sm rounded-5 p-0">
+        <img src="static/images/capa.jpeg" class="cover-bio rounded-top-5" alt="Capa"
+          style="width: 100%; height: 180px; object-fit: cover; border-top-left-radius: 0.375rem; border-top-right-radius: 0.375rem;" />
+        <div class="card-body text-center p-3">
+          <img src="static/images/debora-perfil.png" alt="Foto de Perfil" class="profile-img shadow-sm mt-n5" />
+          <h4 class="mt-2 mb-1 lato-bold">Débora Devi</h4>
+          <p class="mb-2 small text-muted">MASSOTERAPEUTA AYURVÉDICA | INSTRUTORA DE MASSAGENS INDIANAS DA ESCOLA
+            AYURSENSES DE LONDRES</p>
+
+          <div class="collapse show-desktop" id="bioDescriptionCollapse">
+            <p class="mb-2 small bio-descricao">
+              Viveu mais de 30 anos entre França e Índia, mas agora está de volta às suas raízes brasileiras, mantendo
+              uma
+              forte conexão com a cultura indiana. Apaixonou-se desde cedo pelas massagens indianas e se formou em
+              Ayurveda em vários países (França, Índia, Inglaterra e EUA). <br /><br /> Hoje, é embaixadora da escola
+              Ayursenses de Londres e está estabelecida em Pindamonhangaba, São Paulo.
+            </p>
+          </div>
+
+          <button class="btn btn-link btn-sm p-0 mb-2 d-block mx-auto d-md-none bio-about-me-btn" type="button"
+            data-bs-toggle="collapse" data-bs-target="#bioDescriptionCollapse" aria-expanded="false"
+            aria-controls="bioDescriptionCollapse">
+            Sobre mim <span class="accordion-arrow">▲</span>
+          </button>
+
+          <a href="contato.vcf" class="btn btn-sm btn-save-contact" download>Salvar Contato</a>
+          <div class="row mt-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-4 px-2 text-center lato-bold">Acesso rápido</h2>
+    <div class="mt-2 scroll-horizontal justify-content-md-center px-2">
+      <div class="text-center">
+        <a class="icon-button" href="https://wa.me/5512991496679"><i class="bi bi-whatsapp"></i></a>
+        <div class="icon-label">WhatsApp</div>
+      </div>
+      <div class="text-center">
+        <a class="icon-button" href="https://wa.me/5512991496679"><i class="bi bi-instagram"></i></a>
+        <div class="icon-label">Instagram</div>
+      </div>
+      <div class="text-center">
+        <div class="icon-button" href="https://wa.me/5512991496679"><i class="bi bi-calendar-check"></i></div>
+        <div class="icon-label">Agendar</div>
+      </div>
+      <div class="text-center">
+        <a class="icon-button" href="https://wa.me/5512991496679"><i class="bi bi-credit-card"></i></a>
+        <div class="icon-label">E-mail</div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="px-2 text-center lato-bold">Serviços</h2>
+      <div class="scroll-horizontal d-flex justify-content-start px-2">
+        <div class="card card-service shadow-sm rounded-4">
+          <img src="static/images/massagem.png" alt="Massagem" class="card-service-img rounded-top-4" />
+          <div class="card-body">
+            <h6 class="card-title roboto-bold mb-2">Massagem Terapêutica</h6>
+            <p class="card-text small">Alívio, relaxamento e bem-estar.</p>
+            <button class="btn btn-outline-secondary btn-sm rounded-pill" data-bs-toggle="modal"
+              data-bs-target="#massagemTerapeuticaModal">Ver mais</button>
+          </div>
+        </div>
+        <div class="card card-service shadow-sm rounded-4">
+          <img src="static/images/massagem-2.png" alt="Massagem" class="card-service-img rounded-top-4" />
+          <div class="card-body">
+            <h6 class="card-title roboto-bold mb-2">Cursos de Formação</h6>
+            <p class="card-text small"> Cursos profissionalizantes, com exames de avaliação e certificados de
+              participação.</p>
+            <button class="btn btn-outline-secondary btn-sm rounded-pill" data-bs-toggle="modal"
+              data-bs-target="#cursosDeFormacaoModal">Ver mais</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <h2 class="px-2 text-center lato-bold">Veja os feedbacks</h2>
+      <div class="scroll-horizontal justify-content-start px-2">
+
+        <div class="card card-feedback shadow-sm rounded-3">
+          <div class="card-body feedback-item">
+            <img src="static/images/png-profile.png" alt="Foto do cliente" class="feedback-profile-img" />
+            <div class="feedback-content">
+              <h6 class="mb-2 roboto-bold">Vrindavani Vânia</h6>
+
+              <p class="mb-1 small feedback-text">
+                "Estive na SEVA, em Pindamonhangaba, e encontrei um tesouro precioso: Devi Yoga Maya.
+                Com mãos mágicas e um dom raro de unir firmeza, delicadeza e sabedoria ancestral, ela realiza
+                massagens indianas que tocam corpo e alma.
+                <span class="feedback-text-more"> Além de aplicar diversas técnicas da Índia milenar, Devi também
+                  compartilha seu conhecimento em cursos
+                  de formação. 🌺 Visite a SEVA – Sociedade de Estudos Védicos Avançados – e permita-se uma
+                  experiência
+                  transcendental
+                  com essa fada do bem-estar."
+                </span>
+              </p>
+
+              <button class="btn btn-link btn-sm p-0 mb-2 feedback-toggle-btn d-block mx-auto d-md-none" type="button">
+                Ver mais <span class="accordion-arrow">▼</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-feedback shadow-sm rounded-3">
+          <div class="card-body feedback-item">
+            <img src="static/images/png-profile.png" alt="Foto do cliente" class="feedback-profile-img" />
+            <div class="feedback-content">
+              <h6 class="mb-2 roboto-bold">Nome do Outro Cliente</h6>
+              <p class="mb-1 small feedback-text">
+                "Este é um depoimento de exemplo para o segundo card.
+                <span class="feedback-text-more"> Aqui vai a parte mais longa do depoimento que será expandida. É
+                  importante que cada card tenha seu próprio span e botão.
+                  Mais texto para preencher e ver o efeito do accordion."
+                </span>
+              </p>
+              <button class="btn btn-link btn-sm p-0 mb-2 feedback-toggle-btn d-block mx-auto d-md-none" type="button">
+                Ver mais <span class="accordion-arrow">▼</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="massagemTerapeuticaModal" tabindex="-1" aria-labelledby="massagemTerapeuticaModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h5 class="modal-title" id="massagemTerapeuticaModalLabel">Massagem Terapêutica</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="massagemCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="static/images/massagem.png" class="d-block w-100 rounded" alt="Imagem Massagem 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/images/massagem.png" class="d-block w-100 rounded" alt="Imagem Massagem 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/images/massagem.png" class="d-block w-100 rounded" alt="Imagem Massagem 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#massagemCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#massagemCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <p>
+              <strong>Massagem Indiana da Cabeça, pescoço e ombros (45 min)</strong><br />
+              Relaxante, Alivia dores e tensões e Traz Bem-estar
+            </p>
+            <p>
+              <strong>Massagem Ayurvédica dos Pés</strong><br />
+              Relaxante e Regeneradora (1h)
+            </p>
+            <p>
+              <strong>Massagem Ayurvédica Facial rejuvenescedora</strong><br />
+              Relaxante, revitalizante e rejuvenescedora (1h)
+            </p>
+            <p>
+              <strong>Massagem Corporal Abhyanga</strong><br />
+              Relaxante, revitalizante e re-equilibrante (1h30)
+            </p>
+            <p>
+              <strong>Massagem dos pontos vitais Marmas (1h)</strong><br />
+              Calmante, regeneradora e re-equilibrante
+            </p>
+            <p>
+              <strong>Máscara Facial Natural</strong><br />
+              Purificante, relaxante e rejuvenescedora (1h)
+            </p>
+
+            <p class="mt-3 small text-muted">
+              Todas as massagens necessitam de hora marcada e de pagamento adiantado de 50%.<br />
+              Você receberá um <strong>teste ayurvédico</strong> para preencher em casa antes da sessão.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cursosDeFormacaoModal" tabindex="-1" aria-labelledby="cursosDeFormacaoModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-4">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cursosDeFormacaoModalLabel">CURSOS DE FORMAÇÃO</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="cursosCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="static/images/massagem-2.png" class="d-block w-100 rounded" alt="Imagem Curso 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/images/massagem.png" class="d-block w-100 rounded" alt="Imagem Curso 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="static/images/massagem-2.png" class="d-block w-100 rounded" alt="Imagem Curso 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#cursosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#cursosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <p>
+              Os cursos são profissionalizantes, com exames de avaliação e certificados de participação.
+              Eles são abertos para qualquer pessoa, mesmo que não tenha nenhum conhecimento prévio de massagem.
+              Essas técnicas são tanto para profissionais que querem aumentar o leque de práticas ou para os que
+              estão entrando no campo de terapias alternativas.
+            </p>
+            <p class="mb-3">
+              O Certificado Internacional é da Escola Ayursenses & LCIC (London Center of Indian Champissage)
+            </p>
+
+            <p>
+              <strong>Massagem Indiana da Cabeça</strong><br />
+              Um dia de curso, 9hs às 18hs
+            </p>
+            <p>
+              <strong>Massagem Ayurvédica dos Pés com a tigelinha Kansa Vatki</strong><br />
+              Um dia de curso, 9hs às 18hs<br />
+              <em>*Certificado Internacional</em>
+            </p>
+            <p>
+              <strong>Massagem Ayurvédica Facial com a tigelinha Kansa Wand</strong><br />
+              Dois dias de curso, 9hs às 18hs<br />
+              <em>*Certificado Internacional</em>
+            </p>
+            <p>
+              <strong>Massagem Corporal Abhyanga</strong><br />
+              Curso de 4 dias, 2 fins de semana<br />
+              <em>*Certificado Internacional</em>
+            </p>
+            <p>
+              <strong>Massagem Ayurvédica Abdominal</strong><br />
+              Curso de um dia, 9hs às 18hs<br />
+              <em>*Certificado Internacional</em>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const feedbackToggleButtons = document.querySelectorAll('.feedback-toggle-btn');
+
+        feedbackToggleButtons.forEach(button => {
+          const feedbackTextElement = button.previousElementSibling; // <p class="feedback-text">
+          const feedbackCard = button.closest('.card-feedback'); // NOVO: Encontra o card pai
+
+          if (!feedbackTextElement || !feedbackCard) { // Adiciona verificação para o card
+            console.error("Elementos feedback-text ou card-feedback não encontrados para o botão:", button);
+            return;
+          }
+
+          const feedbackTextMoreSpan = feedbackTextElement.querySelector('.feedback-text-more');
+          const arrowSpan = button.querySelector('.accordion-arrow');
+
+          function updateFeedbackDisplay() {
+            if (window.innerWidth < 768) {
+              if (feedbackTextMoreSpan) {
+                feedbackTextMoreSpan.style.display = 'none';
+              }
+              button.style.display = 'inline-block';
+              if (arrowSpan) {
+                arrowSpan.textContent = '▼';
+              }
+              feedbackTextElement.classList.remove('expanded');
+              button.classList.remove('expanded');
+
+              // NOVO: Remove a classe expandida do card no mobile (inicia colapsado)
+              feedbackCard.classList.remove('expanded-card');
+
+            } else {
+              if (feedbackTextMoreSpan) {
+                feedbackTextMoreSpan.style.display = 'inline';
+              }
+              button.style.display = 'none';
+              feedbackTextElement.classList.add('expanded');
+
+              // NOVO: Adiciona a classe expandida ao card no desktop
+              feedbackCard.classList.add('expanded-card');
+            }
+          }
+
+          updateFeedbackDisplay();
+
+          button.addEventListener('click', function () {
+            if (!feedbackTextMoreSpan || !arrowSpan) {
+              console.error("Span de texto ou seta não encontrados para o botão clicado:", this);
+              return;
+            }
+
+            if (feedbackTextElement.classList.contains('expanded')) {
+              // Se estiver expandido, colapsa
+              feedbackTextMoreSpan.style.display = 'none';
+              this.innerHTML = 'Ver mais <span class="accordion-arrow">▼</span>';
+              feedbackTextElement.classList.remove('expanded');
+              this.classList.remove('expanded');
+
+              // NOVO: Remove a classe expandida do card
+              feedbackCard.classList.remove('expanded-card');
+
+            } else {
+              // Se estiver colapsado, expande
+              feedbackTextMoreSpan.style.display = 'inline';
+              this.innerHTML = 'Ver menos <span class="accordion-arrow">▲</span>';
+              feedbackTextElement.classList.add('expanded');
+              this.classList.add('expanded');
+
+              // NOVO: Adiciona a classe expandida ao card
+              feedbackCard.classList.add('expanded-card');
+            }
+          });
+
+          window.addEventListener('resize', updateFeedbackDisplay);
+        });
+
+        // ... (Mantenha o restante do seu script, como a lógica do botão "Sobre mim") ...
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scroll.js"></script>
+</body>
+
+</html>

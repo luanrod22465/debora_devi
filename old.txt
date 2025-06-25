@@ -1,0 +1,32 @@
+ <div class="card card-bio col-10 mx-auto col-md-4 shadow-sm rounded-5 p-0">
+        <!-- Capa da profissional -->
+        <img src="static/images/capa.jpeg" class="cover-bio rounded-top-5" alt="Capa"
+          style="width: 100%; height: 180px; object-fit: cover; border-top-left-radius: 0.375rem; border-top-right-radius: 0.375rem;" />
+        <div class="card-body text-center p-3">
+          <img src="static/images/debora-perfil.png" alt="Foto de Perfil" class="profile-img shadow-sm mt-n5" />
+          <h4 class="mt-2 mb-1 lato-bold">Débora Devi</h4>
+          <p class="mb-2 small text-muted">MASSOTERAPEUTA AYURVÉDICA | INSTRUTORA DE MASSAGENS INDIANAS DA ESCOLA
+            AYURSENSES DE LONDRES</p>
+          <p class="mb-2 small bio-descricao">
+            Viveu mais de 30 anos entre França e Índia, mas agora está de volta às suas raízes brasileiras, mantendo uma
+            forte conexão com a cultura indiana. Apaixonou-se desde cedo pelas massagens indianas e se formou em
+            Ayurveda em vários países (França, Índia, Inglaterra e EUA). <br /><br /> Hoje, é embaixadora da escola
+            Ayursenses de Londres e está estabelecida em Pindamonhangaba, São Paulo.
+          </p>
+          <a href="#" id="expand-bio-descricao">Sobre mim</a>
+          <button class="btn btn-sm btn-save-contact">Salvar Contato</button>
+          <div class="row mt-2"></div>
+          <!--<button class="btn btn-sm btn-agendar-consulta">Agende uma consulta</button>-->
+        </div>
+      </div>
+
+
+
+ <div class="card card-service shadow-sm rounded-4">
+          <img src="static/images/massagem.png" alt="Massagem" class="card-service-img rounded-top-4" />
+          <div class="card-body">
+            <h6 class="card-title roboto-bold mb-2">Massagem Terapêutica</h6>
+            <p class="card-text small">Alívio, relaxamento e bem-estar.</p>
+            <button class="btn btn-outline-secondary btn-sm rounded-pill">Ver mais</button>
+          </div>
+        </div>
