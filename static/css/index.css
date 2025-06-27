@@ -19,7 +19,7 @@ body {
 
 /* === Card Bio === */
 .card-bio {
-    background-color:#fff1dc;
+    background-color: #fff1dc;
     border: none;
 }
 
@@ -111,20 +111,61 @@ body {
     display: flex;
     overflow-x: auto;
     gap: 1rem;
+    flex: 0 0 auto;             
+    align-self: flex-start !important;
     padding: 1rem 0;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     cursor: grab;
 }
 
-.scroll-horizontal.dragging {
+.scroll-horizontal.dragging, .feedback-scroll.dragging {
     cursor: grabbing;
     user-select: none;
 }
 
 /* Ocultar scrollbar no mobile */
-.scroll-horizontal::-webkit-scrollbar {
+.scroll-horizontal::-webkit-scrollbar, .feedback-scroll::-webkit-scrollbar {
     display: none;
+}
+
+
+/* 1. Container que faz o scroll */
+.feedback-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    /* para scroll suave no iOS */
+    padding: 1rem 0;
+    /* “puxa” um pouco pros lados se quiser */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+/* 2. Cada card como inline-block, alinhado ao topo */
+.feedback-scroll .card-feedback {
+    display: inline-block;
+    vertical-align: top;
+    /* garante topo alinhado */
+    white-space: normal;
+    /* gap entre cards */
+    /* mantém seu tamanho fixo */
+    width: 280px;
+    flex: 0 0 auto !important;
+    /* só pra garantir */
+}
+
+.feedback-scroll {
+  display: flex;
+  gap: 1rem;
+}
+
+.feedback-item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* === Botões com Ícone === */
@@ -218,6 +259,8 @@ body {
         display: flex;
         gap: 1rem;
         padding: 1rem 0;
+        /* <<< adiciona esta linha: força cada card a alinhar pelo topo */
+        align-items: flex-start;
     }
 
     .scroll-horizontal::-webkit-scrollbar {
@@ -241,27 +284,56 @@ body {
 }
 
 
+/* MODAL SERVIÇOS */
+/* Define altura fixa para o carrossel */
+.carousel .carousel-inner {
+    height: 300px;
+    /* ajuste conforme necessário */
+    background-color: #000;
+    /* cor de fundo opcional para evitar cinza visível */
+    border-radius: 1.2rem;
+    /* mantém os cantos arredondados */
+}
+
+/* Garante que cada item ocupe 100% da altura */
+.carousel .carousel-item {
+    height: 100%;
+}
+
+/* Faz a imagem preencher todo o item */
+.carousel .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 
 /*FEEDBACKS*/
-/* === FEEDBACKS === */
-
-/* Estilo do card principal de feedback */
 .card-feedback {
-    background-color: #fff1dc; /* Cor de fundo que você definiu */
+    display: flex;
+    background-color: #fff1dc;
+    /* Cor de fundo que você definiu */
     border: none;
     width: 280px;
     flex-shrink: 0;
     flex-grow: 0;
     flex-basis: auto;
-    display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra que você já tinha */
-    border-radius: 0.5rem; /* rounded-3 do Bootstrap */
-    padding: 1rem; /* Padding interno para o conteúdo */
-    align-items: center; /* Centraliza o conteúdo horizontalmente dentro do card */
-    text-align: center; /* Centraliza texto */
-    min-height: 180px; /* Mantém uma altura mínima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra que você já tinha */
+    border-radius: 0.5rem;
+    /* rounded-3 do Bootstrap */
+    padding: 1rem;
+    /* Padding interno para o conteúdo */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente dentro do card */
+    text-align: center;
+    /* Centraliza texto */
+    height: 100%;
+    min-height: 280px; /* ajuste conforme seu conteúdo médio */
+    /* Mantém uma altura mínima */
 }
 
 /* Removi a regra .card-feedback.rounded-3 duplicada, as propriedades estão agora em .card-feedback */
@@ -270,29 +342,36 @@ body {
 .card-body.feedback-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza a imagem de perfil e o feedback-content */
+    align-items: center;
+    /* Centraliza a imagem de perfil e o feedback-content */
     width: 100%;
-    padding: 0; /* Remove padding extra do card-body para controlar melhor o espaçamento */
+    padding: 0;
+    /* Remove padding extra do card-body para controlar melhor o espaçamento */
 }
 
 /* Estilo da imagem de perfil (avatar) */
 .feedback-profile-img {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* Transforma em círculo */
+    border-radius: 50%;
+    /* Transforma em círculo */
     object-fit: cover;
     margin-bottom: 0.5rem;
     border: 2px solid #5A6F4F;
-    display: block; /* Garante que `margin: auto` funcione */
-    margin-left: auto; /* Centraliza a imagem */
-    margin-right: auto; /* Centraliza a imagem */
+    display: block;
+    /* Garante que `margin: auto` funcione */
+    margin-left: auto;
+    /* Centraliza a imagem */
+    margin-right: auto;
+    /* Centraliza a imagem */
 }
 
 /* Estilo para o wrapper do conteúdo de texto (nome e depoimento) */
 .feedback-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o nome e o parágrafo do depoimento */
+    align-items: center;
+    /* Centraliza o nome e o parágrafo do depoimento */
     text-align: center;
     flex-grow: 1;
     width: 100%;
@@ -316,13 +395,18 @@ body {
     word-break: break-word;
     white-space: normal;
     overflow-wrap: break-word;
-    
+
     /* Propriedades para o accordion */
-    max-height: 70px; /* Altura inicial colapsada (ajuste conforme necessário) */
-    overflow: hidden; /* Esconde o texto excedente */
-    position: relative; /* Para o efeito de fade-out */
-    transition: max-height 0.3s ease-out; /* Transição suave para expandir/colapsar */
-    padding-bottom: 0.5em; /* Espaço para o degradê */
+    max-height: 70px;
+    /* Altura inicial colapsada (ajuste conforme necessário) */
+    overflow: hidden;
+    /* Esconde o texto excedente */
+    position: relative;
+    /* Para o efeito de fade-out */
+    transition: max-height 0.3s ease-out;
+    /* Transição suave para expandir/colapsar */
+    padding-bottom: 0.5em;
+    /* Espaço para o degradê */
 }
 
 /* Efeito de "fade out" no final do texto quando colapsado */
@@ -332,9 +416,11 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2em; /* Altura do degradê */
-    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
-    pointer-events: none; /* Permite cliques através do degradê */
+    height: 2em;
+    /* Altura do degradê */
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    /* Permite cliques através do degradê */
 }
 
 /* Remove o degradê quando o texto está expandido */
@@ -344,14 +430,18 @@ body {
 
 /* Estilo quando o texto está expandido */
 .feedback-text.expanded {
-    max-height: 500px; /* Um valor alto o suficiente para todo o texto */
-    overflow: visible; /* Garante que todo o texto seja visível */
-    transition: max-height 0.5s ease-out; /* Transição suave para expandir */
+    max-height: 500px;
+    /* Um valor alto o suficiente para todo o texto */
+    overflow: visible;
+    /* Garante que todo o texto seja visível */
+    transition: max-height 0.5s ease-out;
+    /* Transição suave para expandir */
 }
 
 /* Estilo para o span com o texto completo (oculto por padrão no mobile) */
 .feedback-text-more {
-    display: none; /* Oculto por padrão no mobile */
+    display: none;
+    /* Oculto por padrão no mobile */
 }
 
 /* Estilo para o botão "Ver mais" */
@@ -361,7 +451,8 @@ body {
     color: #5A6F4F !important;
     text-decoration: none !important;
     margin-top: 0.5rem;
-    display: none; /* Oculto por padrão, será mostrado via JS em mobile */
+    display: none;
+    /* Oculto por padrão, será mostrado via JS em mobile */
     cursor: pointer;
 }
 
@@ -384,28 +475,44 @@ body {
 }
 
 /* === Media Queries para Responsividade === */
-@media (max-width: 767.98px) { /* Apenas para telas pequenas (mobile) */
+@media (max-width: 767.98px) {
+
+    /* Apenas para telas pequenas (mobile) */
     .feedback-text-more {
-        display: none; /* Oculta a parte "mais" no mobile */
+        display: none;
+        /* Oculta a parte "mais" no mobile */
     }
+
     .feedback-toggle-btn {
-        display: inline-block; /* O botão "Ver mais" aparece no mobile */
+        display: inline-block;
+        /* O botão "Ver mais" aparece no mobile */
     }
 }
 
-@media (min-width: 768px) { /* Para telas médias e grandes (desktop) */
+@media (min-width: 768px) {
+
+    /* Para telas médias e grandes (desktop) */
     .feedback-text-more {
-        display: inline !important; /* Força a exibição do texto completo no desktop */
+        display: inline !important;
+        /* Força a exibição do texto completo no desktop */
     }
+
     .feedback-toggle-btn {
-        display: none !important; /* Oculta o botão "Ver mais" no desktop */
+        display: none !important;
+        /* Oculta o botão "Ver mais" no desktop */
     }
+
     .feedback-text {
-        max-height: none !important; /* Remove limite de altura no desktop */
-        overflow: visible !important; /* Garante que todo o texto seja visível */
-        padding-bottom: 0 !important; /* Remove o padding para o degradê no desktop */
+        max-height: none !important;
+        /* Remove limite de altura no desktop */
+        overflow: visible !important;
+        /* Garante que todo o texto seja visível */
+        padding-bottom: 0 !important;
+        /* Remove o padding para o degradê no desktop */
     }
+
     .feedback-text::after {
-        display: none !important; /* Remove o degradê no desktop */
+        display: none !important;
+        /* Remove o degradê no desktop */
     }
 }
